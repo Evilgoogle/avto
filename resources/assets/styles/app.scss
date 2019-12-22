@@ -1,0 +1,211 @@
+@import "normalize";
+@import "libs";
+@import "fonts";
+@import "animate";
+@import "node_modules/swiper/dist/css/swiper";
+@import "node_modules/sweetalert2/src/sweetalert2";
+
+/* basic */
+.contain {
+  max-width: 1640px;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  @include respond-to(w-1023) {
+    max-width: 100%;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+body {
+  background-color: $color-brown;
+  color: $color-yellow-lite;
+  font-size: 20px;
+  position: relative;
+}
+.team_button {
+  @include button_reset;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-yellow;
+  color: $color-white;
+  transition: $animation_easy;
+  border-radius: 4px;
+  font-size: 20px;
+  &:hover {
+    background-color: $color-white;
+    color: $color-brown;
+  }
+}
+.team_header {
+  width: 460px;
+  margin: 50px auto 40px;
+  text-align: center;
+  .block {
+    display: flex;
+    align-items: center;
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: $color-yellow;
+    }
+    .mini {
+      padding: 0 55px;
+      word-wrap: break-word;
+      color: $color-yellow;
+      font-size: 26px;
+    }
+  }
+  .text {
+    color: $color-white;
+    font-size: 53px;
+    text-align: center;
+    margin-top: 20px;
+    word-wrap: break-word;
+  }
+}
+.block_pictext {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  .bn {
+    width: 33.3%;
+    padding: 30px;
+    box-sizing: border-box;
+    .box {
+      text-align: center;
+      .image {
+        @include set_contain;
+        width: 105px;
+        height: 105px;
+        margin: auto;
+      }
+      .title {
+        font-size: 30px;
+        margin-top: 30px;
+        color: $color-white;
+      }
+      .desc {
+        margin-top: 30px;
+        color: $color-gray;
+      }
+    }
+  }
+}
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+/* conten */
+header {
+  .top {
+    height: 60px;
+    .contain {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .phone {
+      @include a_reset($color-white);
+      display: flex;
+      align-items: center;
+      &:before {
+        content: "\f09c";
+        display: block;
+        @include fontawesome;
+        font-size: 20px;
+        color: $color-yellow;
+        margin-right: 15px;
+      }
+      span {
+        color: $color-white;
+      }
+    }
+  }
+  .logo {
+    height: 100px;
+    border-bottom: 1px solid#322f32;
+    a {
+      width: 265px;
+      margin: 20px auto;
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    border-bottom: 1px solid#322f32;
+    .mobile_menu {
+      display: none;
+      margin: 15px auto;
+      @include respond-to(w-1023) {
+        display: block;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      li {
+        list-style-type: none;
+        margin: 0 10px;
+        a {
+          @include a_reset($color-white);
+        }
+        .active {
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+}
+.section_main {
+  @include img_cover('../images/main.jpg');
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-attachment: fixed;
+  h1 {
+    color: $color-white;
+    text-align: center;
+    font-size: 60px;
+  }
+  small {
+    width: 70%;
+    margin: 2vw auto;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    color: $color-white;
+  }
+}
+.section_calculate {
+  .team_header {
+    width: 80%;
+    .mini {
+      font-size: 30px;
+    }
+    .text {
+      font-size: 40px;
+    }
+  }
+}
+.section_available {
+  padding-top: 7vw;
+  @include img_cover('../images/avai_fon.jpg');
+}
+.section_404 {
+  img {
+    width: 100%;
+  }
+}
