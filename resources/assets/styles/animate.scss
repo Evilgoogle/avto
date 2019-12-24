@@ -1,29 +1,30 @@
-/* Normalize */
+/*
+!* Normalize *!
 @import "normalize";
 
-/* Fonts */
+!* Fonts *!
 @import "fonts";
 
-/* Variables */
+!* Variables *!
 @import "variables";
 
-/* Font-Awesome */
+!* Font-Awesome *!
 @import "node_modules/font-awesome/scss/font-awesome.scss";
 
-/* Bootstrap */
+!* Bootstrap *!
 //@import "node_modules/bootstrap/dist/css/bootstrap";
 
-/* Swiper */
+!* Swiper *!
 @import "node_modules/swiper/dist/css/swiper";
 
-/* Alertify */
+!* Alertify *!
 @import "node_modules/alertifyjs/build/css/alertify";
 @import "node_modules/alertifyjs/build/css/themes/default";
 
-/* Animate */
+!* Animate *!
 @import "animate";
 
-/* Lightslider */
+!* Lightslider *!
 //@import "lightslider";
 
 // Lightbox
@@ -35,7 +36,7 @@
 // Jquery UI
 @import "jquery-ui.css";
 
-/*------------------------------------*/
+!*------------------------------------*!
 
 input, textarea, button {
   outline: none;
@@ -208,11 +209,11 @@ main {
   }
 }
 
-/*
+!*
 |--------------------------------------------------------------------------
 | WebSite
 |--------------------------------------------------------------------------
-*/
+*!
 
 .content_text {
   color: white;
@@ -1695,7 +1696,7 @@ footer {
     @include respond-to(w-1100) {
       padding: 40px 0;
     }
-
+calc-ui-slider-val
     .head {
       font-family: $font-robcond-bold;
       font-size: 32px;
@@ -2388,4 +2389,4 @@ footer {
       }
     }
   }
-}
+}*/

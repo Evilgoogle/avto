@@ -262,7 +262,6 @@ header {
                 color: $color-gray;
                 margin-bottom: 15px;
               }
-
               .num {
                 font-size: 30px;
                 color: $color-gray;
@@ -307,6 +306,7 @@ header {
                 top: 0;
                 margin-left: -12px;
                 cursor: pointer;
+                display: block;
               }
             }
           }

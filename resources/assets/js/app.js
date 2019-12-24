@@ -1,10 +1,25 @@
-require('./inputmask');
+require('./tweenmax.min');
+require('./jquery-ui.min');
+require('./jquery.ui.touch-punch.min');
+require('./jquery.plate');
+require('./bootstrap');
+require('./jquery.numeric');
 const Swal = require('sweetalert2');
 var Swiper = require('swiper/dist/js/swiper');
+var alertify = require('alertifyjs');
+
+// Ширина и высота экрана
+$displayWidht = screen.width;
+$displayHeight = screen.height;
+console.log("Ширина экрана: " + $displayWidht + " / Высота экрана: " + $displayHeight);
 
 // Ширина и высота браузера клиента
-$clientWidht = document.documentElement.clientWidth;
-$clientHeight = document.documentElement.clientHeight;
+$clientWidht = window.innerWidth;
+$clientHeight = window.innerHeight;
+console.log("Ширина браузера: " + $clientWidht + " / Высота браузера: " + $clientHeight);
+
+$user_agent = navigator.userAgent.toLowerCase(); // detect the user agent
+$ios_devices = $user_agent.match(/(iphone|ipad|ipod)/)  ? "touchstart" : "click"; //check ios devices
 
 // WOW JS
 var WOW = require('wow.js');
@@ -14,7 +29,7 @@ new WOW().init();
 // Parallax js
 const Parallax = require('parallax-js');
 
-$('input.phone').inputmask("+7 (999) 999 9999");
+//$('input.phone').inputmask("+7 (999) 999 9999");
 
 /* Прослушка ориентаций экрана */
 var mql = window.matchMedia("(orientation: portrait)");
@@ -22,187 +37,173 @@ mql.addListener(function(m) {
     window.location = location.pathname;
 });
 
-$(document).ready(function () {
 
-    // nav search
-    $('.js_search').click(function () {
+$(document).ready(function() {
 
-        var input = $('#nav_search_input');
-        if(input.hasClass('active')) {
-            input.removeClass('active');
-            setTimeout(function () {
-                input.css('display', 'none')
-            },300);
-        } else {
-            input.css('display', 'block')
-            setTimeout(function () {
-                input.addClass('active');
-            },100);
-        }
-    });
+    if ($('*').hasClass('ul-input')) {
+        var region_value = 20000;
+        $(".calc-cost .num_input").val(region_value);
+        f_calcGetVal();
+        var cost_sl = $(".calc-cost .calc-ui-slider").slider({
+            range: "min",
+            min: 0,
+            max: region_value,
+            value: region_value,
+            step: 100000,
+            slide: function (event, ui) {
+                var val1 = ui.value
+                    /*val2 = bitNumber(val1)*/;
 
-    // main swiper
-    var orientation = 'vertical';
-    if (window.matchMedia("(orientation: portrait)").matches) {
-        orientation = 'horizontal'
-    }
-    var main_swiper_panel = $('.main_swiper_panel .block').data('blocks');
-    var main_swiper  = new Swiper('.main_swiper', {
-        direction: orientation,
-        pagination: {
-            el: '.main_swiper_panel .block',
-            clickable: true,
-            renderBullet: function (index, className) {
-                for (var key in main_swiper_panel) {
-                    if(index == key) {
-                        return '<button class="bn ' + className + '">' +
-                            '<div class="text">'+main_swiper_panel[key].title+'</div>' +
-                            '<div class="icon" style="background-image: url(/files/' + main_swiper_panel[key].icon + ')"></div>' +
-                            '</button>';
-                    }
-                }
+                $(".calc-cost .num_input").val(val1);
             },
-        },
-        speed: 1300,
-        navigation: {
-            nextEl: '.next',
-            prevEl: '.prev',
-        },
-        effect: 'coverflow',
-        grabCursor: true,
-        mousewheel: true,
-    });
+            change: function (event, ui) {
+                var cost = ui.value;
+                $(".calc-cost input:not(.num_input)").val(region_value);
 
-    // Parallax main
-   $('.main_swiper .swiper-slide').each(function (key, val) {
+                var fee = cost / 5;
+                $(".calc-fee input").val(fee);
+                $(".calc-fee .num span:not(.txt)").text(bitNumber(fee));
 
-       var fon = $(val).children('.fon').children('.zoomer').attr('id'),
-           image = $(val).children('.image').attr('id');
+                var sum = cost - fee;
+                $(".calc-sum input").val(sum);
+                $(".calc-sum .num span:not(.txt)").text(bitNumber(sum));
 
-       var main_fon = document.getElementById(fon);
-       new Parallax(main_fon, {
-           scalarX: 26
-       });
+                f_calcForm();
+            }
+        });
 
-       var main_image = document.getElementById(image);
-       new Parallax(main_image);
-   });
+        var cost_s2 = $(".calc-time .calc-ui-slider").slider({
+            range: "min",
+            min: 1,
+            max: 25,
+            value: 25,
+            step: 1,
+            slide: function (event, ui) {
+                var val1 = ui.value;
 
-   // Gallary
-    var gal_slides = 4;
-    var gal_stretch = 0;
-    if ($clientWidht < 1024) {
-        gal_slides = 2;
-        gal_stretch = 40
-    }
-    var swiper_gallary = new Swiper('.swiper_gallary .swiper-container', {
-        slidesPerView: gal_slides,
-        spaceBetween: 0,
-        loop: true,
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        keyboard: {
-            enabled: true,
-        },
-        navigation: {
-            nextEl: '.next',
-            prevEl: '.prev',
-        },
-        mousewheel: true,
-        coverflowEffect: {
-            rotate: 0,
-            stretch: gal_stretch,
-            depth: 140,
-            modifier: 1,
-            slideShadows : true
-        },
-    });
+                f_calcLang(val1);
 
-    // Mobile nav
-    $('.js_mobile_nav').click(function () {
-
-        $('nav').addClass('active_nav');
-    });
-    $('.js_close_nav').click(function () {
-
-        $('nav').removeClass('active_nav');
-    });
-
-    $('.js_arrow_ind').click(function () {
-
-        var ind = $('#ind_mobile');
-        if(ind.hasClass('active_ind_mobile')) {
-            ind.removeClass('active_ind_mobile');
-        } else {
-            ind.addClass('active_ind_mobile');
-        }
-    });
-
-    // Map
-    $('.js_map').click(function () {
-        $('.map').addClass('active');
-    });
-    $('.js_close').click(function () {
-        $('.map').removeClass('active');
-    });
-
-    $('.js_modal_cose').click(function () {
-
-        $('#modal_buy .modal').removeClass('modal_active');
-        $('#modal_buy .modal .flipper').removeClass('success');
-
-        $('#modal_reviews .modal').removeClass('modal_active');
-
-        $('#overlay').removeClass('active');
-    });
-    $('#overlay').click(function () {
-
-        $('#modal_buy .modal').removeClass('modal_active');
-        $('#modal_buy .modal .flipper').removeClass('success');
-
-        $('#modal_reviews .modal').removeClass('modal_active');
-
-        $('#overlay').removeClass('active');
-    });
-
-    var request = $('#request');
-    request.submit(function(e){
-        e.preventDefault();
-        var formData = request.serialize();
-        $.ajax({
-            url: '/request',
-            type: 'POST',
-            data: formData,
-            dataType: 'json',
-            headers: {
-                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+                $(".calc-time .num span.year").text(val1);
             },
-            success: function(data){
-                if (data.status == 'ok') {
-                    Swal.fire({
-                        title: 'Спасибо',
-                        html: 'Ваш отзыв после появится после модераций',
-                        type: 'success',
-                        confirmButtonText: 'Закрыть'
-                    });
-                    $("input", request).val('');
-                }
-            },
-            error: function (data) {
-                var alert = data.responseJSON;
-                var errors = [];
-                for(var a in alert) {
-                    errors.push(alert[a][0]);
-                }
-                Swal.fire({
-                    title: 'Ошибка!',
-                    html: errors.join('<br>'),
-                    type: 'error',
-                    confirmButtonText: 'Закрыть'
+            change: function (event, ui) {
+                $(".calc-time input").val(ui.value);
+                f_calcForm();
+            }
+        });
+
+        $(document).on('click', '.li-region [name="region"]:checked', function () {
+            var $this_val = $(this).val();
+
+            cost_sl.slider({
+                value: $this_val,
+                max: $this_val
+            });
+
+            cost_s2.slider({
+                value: 25
+            });
+
+            f_calcGetVal();
+            f_calcForm();
+        });
+
+        $('.num_input').numeric({allowEmpty:true, live:true}, function (val) {
+            $('.alertify-notifier').empty();
+
+            var region_value = $('[name="region"]:checked').val();
+
+            if (val <= region_value) {
+                if (val == "null") val = 0;
+
+                $(".calc-cost .num_input").val(val);
+                $(".calc-cost input:not(.num_input)").val(val);
+                $(".calc-cost .calc-ui-slider").slider({
+                    value: val
+                });
+            } else {
+                alertify.success('Максимальное значение не должно превышать: ' + bitNumber(region_value));
+                $(".calc-cost input:not(.num_input)").val(val);
+                $(".calc-cost .num_input").val(region_value);
+                $(".calc-cost .calc-ui-slider").slider({
+                    value: region_value
                 });
             }
         });
+
+        f_calcLang();
+        f_calcForm();
+    }
+
+    if ($clientWidht > 640) {
+        if ($('div').hasClass('section_faq')) {
+            var f_height = $('.section_faq').innerHeight();
+            $('.section_faq').innerHeight(f_height);
+        }
+    }
+
+    $(document).on($ios_devices, '.go-section', function () {
+        var section = $(this).data('section');
+        moveToSection(section);
     });
 
+    // scroll to section
+    function moveToSection(section) {
+        var offset = $('[data-anchor="'+ section+'"]').offset().top;
+        $('body,html').animate({scrollTop: offset - headerHeight}, 1000);
+    }
 });
+
+// разрядность числа
+function bitNumber(number) {
+    return String(number).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+}
+
+function f_calcGetVal() {
+    var region_value = $('[name="region"]:checked').val();
+    $(".calc-cost .num_input").val(region_value);
+    $(".calc-cost input:not(.num_input)").val(region_value);
+
+    $('.calc-time .year').text(25);
+    f_calcLang(25);
+
+    var fee = region_value / 5;
+    $(".calc-fee input").val(fee);
+    $(".calc-fee .num span:not(.txt)").text(bitNumber(fee));
+
+    var sum = region_value - fee;
+    $(".calc-sum input").val(sum);
+    $(".calc-sum .num span:not(.txt)").text(bitNumber(sum));
+    $(".calc-time input").val(25);
+}
+
+// калькулятор
+function f_calcForm() {
+    var form = $("#calcForm"),
+        cost = $('[name="c_cost"]').val(), /*стоимость жилья*/
+        fee = $('[name="c_fee"]').val(), /*первоначальный взнос*/
+        time = $('[name="c_time"]').val(), /*срок займа*/
+        sum = $('[name="c_sum"]').val(); /*сумма залога*/
+
+    // console.log(sum + ' ' + time);
+
+    const percent = 0.07 / 12; // процентная ставка 7% деленная на 12 месяцев
+
+    var month = sum * (percent / (1 - Math.pow((1 + percent), -(time * 12) ))); // ежемесячный платеж
+    $('.month .num span').text(bitNumber(parseFloat(month.toFixed(2))));
+}
+
+function f_calcLang(int) {
+
+    new_lang = "лет";
+    if (int != "" && int > 0) {
+        if (int == 1 || int == 21)
+            new_lang = "год";
+        else if ((int>=2 && int<=4) || (int>=22 && int<=24))
+            new_lang = "года";
+        else {
+            new_lang = "лет";
+        }
+    }
+
+    $(".calc-time .num span.txt").text(new_lang);
+}
