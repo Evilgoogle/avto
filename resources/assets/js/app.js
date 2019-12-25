@@ -48,8 +48,8 @@ $(document).ready(function() {
             range: "min",
             min: 0,
             max: region_value,
-            value: region_value,
-            step: 100000,
+            value: 0,
+            step: 1,
             slide: function (event, ui) {
                 var val1 = ui.value
                     /*val2 = bitNumber(val1)*/;
@@ -57,16 +57,9 @@ $(document).ready(function() {
                 $(".calc-cost .num_input").val(val1);
             },
             change: function (event, ui) {
+
                 var cost = ui.value;
-                $(".calc-cost input:not(.num_input)").val(region_value);
-
-                var fee = cost / 5;
-                $(".calc-fee input").val(fee);
-                $(".calc-fee .num span:not(.txt)").text(bitNumber(fee));
-
-                var sum = cost - fee;
-                $(".calc-sum input").val(sum);
-                $(".calc-sum .num span:not(.txt)").text(bitNumber(sum));
+                $(".calc-cost input:not(.num_input)").val(cost);
 
                 f_calcForm();
             }
@@ -75,10 +68,11 @@ $(document).ready(function() {
         var cost_s2 = $(".calc-time .calc-ui-slider").slider({
             range: "min",
             min: 1,
-            max: 25,
-            value: 25,
+            max: 12,
+            value: 12,
             step: 1,
             slide: function (event, ui) {
+                console.log(ui);
                 var val1 = ui.value;
 
                 f_calcLang(val1);
@@ -159,12 +153,12 @@ function bitNumber(number) {
 }
 
 function f_calcGetVal() {
-    var region_value = $('[name="region"]:checked').val();
+    var region_value = 200000;
     $(".calc-cost .num_input").val(region_value);
     $(".calc-cost input:not(.num_input)").val(region_value);
 
-    $('.calc-time .year').text(25);
-    f_calcLang(25);
+    $('.calc-time .year').text(12);
+    f_calcLang(12);
 
     var fee = region_value / 5;
     $(".calc-fee input").val(fee);
@@ -194,14 +188,14 @@ function f_calcForm() {
 
 function f_calcLang(int) {
 
-    new_lang = "лет";
+    new_lang = "месяцев";
     if (int != "" && int > 0) {
         if (int == 1 || int == 21)
-            new_lang = "год";
+            new_lang = "месяц";
         else if ((int>=2 && int<=4) || (int>=22 && int<=24))
-            new_lang = "года";
+            new_lang = "месяца";
         else {
-            new_lang = "лет";
+            new_lang = "месяцев";
         }
     }
 
