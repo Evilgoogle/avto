@@ -40,9 +40,9 @@ mql.addListener(function(m) {
 
 $(document).ready(function() {
 
+    var basic_region = 200000;
     if ($('*').hasClass('ul-input')) {
-        var region_value = 20000;
-        $(".calc-cost .num_input").val(region_value);
+        var region_value = basic_region;
         f_calcGetVal();
         var cost_sl = $(".calc-cost .calc-ui-slider").slider({
             range: "min",
@@ -72,7 +72,6 @@ $(document).ready(function() {
             value: 12,
             step: 1,
             slide: function (event, ui) {
-                console.log(ui);
                 var val1 = ui.value;
 
                 f_calcLang(val1);
@@ -85,26 +84,10 @@ $(document).ready(function() {
             }
         });
 
-        $(document).on('click', '.li-region [name="region"]:checked', function () {
-            var $this_val = $(this).val();
-
-            cost_sl.slider({
-                value: $this_val,
-                max: $this_val
-            });
-
-            cost_s2.slider({
-                value: 25
-            });
-
-            f_calcGetVal();
-            f_calcForm();
-        });
-
-        $('.num_input').numeric({allowEmpty:true, live:true}, function (val) {
+        /*$('.num_input').numeric({allowEmpty:true, live:true}, function (val) {
             $('.alertify-notifier').empty();
 
-            var region_value = $('[name="region"]:checked').val();
+            var region_value = basic_region;
 
             if (val <= region_value) {
                 if (val == "null") val = 0;
@@ -122,28 +105,10 @@ $(document).ready(function() {
                     value: region_value
                 });
             }
-        });
+        });*/
 
         f_calcLang();
         f_calcForm();
-    }
-
-    if ($clientWidht > 640) {
-        if ($('div').hasClass('section_faq')) {
-            var f_height = $('.section_faq').innerHeight();
-            $('.section_faq').innerHeight(f_height);
-        }
-    }
-
-    $(document).on($ios_devices, '.go-section', function () {
-        var section = $(this).data('section');
-        moveToSection(section);
-    });
-
-    // scroll to section
-    function moveToSection(section) {
-        var offset = $('[data-anchor="'+ section+'"]').offset().top;
-        $('body,html').animate({scrollTop: offset - headerHeight}, 1000);
     }
 });
 
@@ -153,32 +118,19 @@ function bitNumber(number) {
 }
 
 function f_calcGetVal() {
-    var region_value = 200000;
-    $(".calc-cost .num_input").val(region_value);
-    $(".calc-cost input:not(.num_input)").val(region_value);
+
+    $(".calc-cost .num_input").val(0);
+    $(".calc-cost input:not(.num_input)").val(0);
 
     $('.calc-time .year').text(12);
     f_calcLang(12);
-
-    var fee = region_value / 5;
-    $(".calc-fee input").val(fee);
-    $(".calc-fee .num span:not(.txt)").text(bitNumber(fee));
-
-    var sum = region_value - fee;
-    $(".calc-sum input").val(sum);
-    $(".calc-sum .num span:not(.txt)").text(bitNumber(sum));
-    $(".calc-time input").val(25);
 }
 
 // калькулятор
 function f_calcForm() {
     var form = $("#calcForm"),
-        cost = $('[name="c_cost"]').val(), /*стоимость жилья*/
-        fee = $('[name="c_fee"]').val(), /*первоначальный взнос*/
-        time = $('[name="c_time"]').val(), /*срок займа*/
-        sum = $('[name="c_sum"]').val(); /*сумма залога*/
-
-    // console.log(sum + ' ' + time);
+        sum = $('[name="c_cost"]').val(), /* сумма крдита */
+        time = $('[name="c_time"]').val(); /* сумма залога */
 
     const percent = 0.07 / 12; // процентная ставка 7% деленная на 12 месяцев
 

@@ -28,14 +28,17 @@
         <small>Получите деньги под залог автомобиля через 2 часа после обращения</small>
     </div>
     <section class="section_calculate">
-        <div class="team_header">
-            <div class="block">
-                <div class="line"></div>
-                <div class="mini">Рассчитайте самостоятельно</div>
-                <div class="line"></div>
-            </div>
-            <div class="text">
-                свой ежемесячный платеж и сумму переплат
+        <div class="contain">
+            <div class="team_header">
+                <div class="block">
+                    <div class="line"></div>
+                    <div class="mini">Рассчитайте самостоятельно</div>
+                    <div class="line"></div>
+                </div>
+                <div class="text">
+                    свой ежемесячный платеж и сумму переплат
+                </div>
+                <div class="pic"></div>
             </div>
             <div class="calc_container">
                 <div class="calc_top">
@@ -44,7 +47,7 @@
                             <ul class="ul-input">
                                 <li class="li-input-calc calc-cost">
                                     <div class="calc-ui-slider-val">
-                                        <div class="title">Стоимость жилья</div>
+                                        <div class="title">Сумма кредита</div>
                                         <div class="num"><span><input type="text" class="num_input"></span> <span class="txt cost-txt">₸</span></div>
                                         <input type="hidden" name="c_cost" value="25000000">
                                     </div>
@@ -53,13 +56,23 @@
                                 <li class="li-input-calc calc-time">
                                     <div class="calc-ui-slider-val">
                                         <div class="title">Срок займа</div>
-                                        <div class="num"><span class="year">25</span> <span class="txt">лет</span></div>
+                                        <div class="num"><span class="year">12</span> <span class="txt">месяцев</span></div>
                                         <input type="hidden" name="c_time" value="25">
                                     </div>
                                     <div class="calc-ui-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min" style="width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
                                 </li>
-
-
+                                <li class="li-input-calc calc-time">
+                                    <div class="calc-ui-slider-val">
+                                        <div class="title">Ваше имя</div>
+                                        <input type="text" name="name">
+                                    </div>
+                                </li>
+                                <li class="li-input-calc calc-time">
+                                    <div class="calc-ui-slider-val">
+                                        <div class="title">Ваше номер</div>
+                                        <input type="text" name="phone" class="phone">
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </form>
@@ -67,6 +80,7 @@
                 <div class="calc_bottom month concl_item">
                     <div class="title">Ежемесячный взнос</div>
                     <div class="num"><span>NaN</span> ₸</div>
+                    <button type="button" class="js_calc_ok"><span>Оставить заявку</span></button>
                 </div>
             </div>
         </div>
@@ -91,6 +105,9 @@
                 </div>
             @endforeach
         </div>
+    </section>
+    <section>
+
     </section>
 
 @stop
