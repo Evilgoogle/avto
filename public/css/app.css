@@ -5925,6 +5925,60 @@ header nav ul li .active {
   background-size: cover;
 }
 
+.section_imagetext .contain {
+  background-color: #dfd8d2;
+  padding: 2vw 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section_imagetext .contain .team_header {
+  width: 50%;
+}
+
+.section_imagetext .contain .team_header .block {
+  width: 60%;
+  margin: auto;
+}
+
+.section_imagetext .contain .team_header .mini {
+  font-size: 30px;
+}
+
+.section_imagetext .contain .team_header .text {
+  width: 50%;
+  margin: 30px auto 0;
+  font-size: 50px;
+  color: #1D1D1E;
+}
+
+.section_imagetext .contain .team_header .pic {
+  width: 100%;
+  height: 18vw;
+  background: url(/images/avto_pic.png?7857296de6fd560edfd806b3965257ea) no-repeat center;
+  background-size: contain;
+  margin-top: 30px;
+}
+
+.section_imagetext .contain .block {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section_imagetext .contain .block .bn {
+  width: 50%;
+  color: #1c1c1c;
+  padding: 50px;
+  font-size: 25px;
+}
+
+.section_imagetext .contain .block .bn .image {
+  height: 10vw;
+}
+
 .section_404 img {
   width: 100%;
 }
