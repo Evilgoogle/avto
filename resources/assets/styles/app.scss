@@ -22,6 +22,7 @@ body {
   color: $color-yellow-lite;
   font-size: 20px;
   position: relative;
+  font-family: $font-Lato_Regular;
 }
 .team_button {
   @include button_reset;
@@ -41,7 +42,7 @@ body {
   }
 }
 .team_header {
-  width: 460px;
+  width: 50%;
   margin: 50px auto 40px;
   text-align: center;
   .block {
@@ -56,7 +57,8 @@ body {
       padding: 0 55px;
       word-wrap: break-word;
       color: $color-yellow;
-      font-size: 26px;
+      font-size: 23px;
+      text-transform: uppercase;
     }
   }
   .text {
@@ -65,6 +67,8 @@ body {
     text-align: center;
     margin-top: 20px;
     word-wrap: break-word;
+    font-family: $font-Lora_Regular;
+    text-transform: uppercase;
   }
 }
 .block_pictext {
@@ -87,7 +91,8 @@ body {
       .title {
         font-size: 30px;
         margin-top: 30px;
-        color: $color-white;
+        color: $color-yellow;
+        font-family: $font-Lora_Regular;
       }
       .desc {
         margin-top: 30px;
@@ -144,6 +149,7 @@ header {
     align-items: center;
     height: 75px;
     border-bottom: 1px solid#322f32;
+    font-size: 16px;
     .mobile_menu {
       display: none;
       margin: 15px auto;
@@ -179,6 +185,8 @@ header {
     color: $color-white;
     text-align: center;
     font-size: 60px;
+    font-family: $font-Lora_Regular;
+    text-transform: uppercase;
   }
   small {
     width: 70%;
@@ -204,10 +212,11 @@ header {
         font-size: 30px;
       }
       .text {
-        width: 50%;
+        width: 80%;
         margin: 30px auto 0;
         font-size: 50px;
         color: $color-black;
+        font-family: $font-Lora_Regular;
       }
       .pic {
         width: 100%;
@@ -389,6 +398,7 @@ header {
   @include img_cover('../images/avai_fon.jpg');
 }
 .section_imagetext {
+  margin: 6vw 0 1vw;
   .contain {
     background-color: $color-yellow-lite;
     padding: 2vw 0;
@@ -407,6 +417,7 @@ header {
         margin: 30px auto 0;
         font-size: 50px;
         color: $color-black;
+        font-family: $font-Lora_Regular;
       }
       .pic {
         width: 100%;
@@ -423,7 +434,7 @@ header {
         width: 50%;
         color: $color-brown;
         padding: 50px;
-        font-size: 25px;
+        font-size: 22px;
         .image {
           height: 10vw;
         }
@@ -431,8 +442,77 @@ header {
     }
   }
 }
+.section_docs {
+  box-sizing: border-box;
+  padding: 5vw 0;
+}
 .section_404 {
   img {
     width: 100%;
+  }
+}
+
+footer {
+  #map {
+    height: 10vw;
+    background-color: $color-yellow-lite;
+  }
+  .down {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -3vw;
+    box-sizing: border-box;
+    padding: 6vw 0 4vw;
+    .bn {
+      width: 25%;
+      box-sizing: border-box;
+      padding: 0 3vw;
+      font-size: 17px;
+      .box {
+        .title {
+          font-size: 22px;
+          margin-bottom: 40px;
+          color: $color-white;
+        }
+        .text {
+          width: 100%;
+          color: $color-gray;
+          display: block;
+          line-height: 1.5;
+        }
+      }
+      .nav {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style-type: none;
+          margin-bottom: 25px;
+          a {
+            @include a_reset($color-yellow);
+            transition: $animation_easy;
+            &:hover {
+              @include a_reset($color-white);
+            }
+          }
+        }
+      }
+      address {
+        display: block;
+        color: $color-gray;
+        font-style: normal;
+      }
+      .contact_bn {
+        p {
+          color: $color-gray;
+        }
+        .yellow {
+          @include a_reset($color-yellow);
+          transition: $animation_easy;
+          &:hover {
+            @include a_reset($color-white);
+          }
+        }
+      }
+    }
   }
 }

@@ -383,43 +383,15 @@ template {
 }
 
 @font-face {
-  font-family: 'Roboto_Light';
-  src: url(/fonts/Roboto-Light.ttf?46e48ce0628835f68a7369d0254e4283) format("truetype");
+  font-family: 'Lora_Regular';
+  src: url(/fonts/Lora-Regular.ttf?a89728a7e009b183ddecfd3be9c5b237) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto_Medium';
-  src: url(/fonts/Roboto-medium.ttf?894a2ede85a483bf9bedefd4db45cdb9) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto_Bold';
-  src: url(/fonts/Roboto-bold.ttf?e31fcf1885e371e19f5786c2bdfeae1b) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto_Black';
-  src: url(/fonts/Roboto-Black.ttf?f3fa86edfc2b810bf7a3ea7cf010d292) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto_LightItalic';
-  src: url(/fonts/Roboto-LightItalic.ttf?4356190d747fe8bea2bc7c83f25102fa) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto_Regular';
-  src: url(/fonts/Roboto-Regular.ttf?df7b648ce5356ea1ebce435b3459fd60) format("truetype");
+  font-family: 'Lato_Regular';
+  src: url(/fonts/Lato-Regular.ttf?5d14391995929c6799688d83c870794a) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -427,7 +399,7 @@ template {
 /*custom media points*/
 
 body {
-  font-family: "Roboto_Regular";
+  font-family: "Lato_Regular";
   padding: 0 20px;
   margin: 20px auto;
   font-size: 20px;
@@ -435,7 +407,7 @@ body {
 }
 
 body > *:first-child {
-  font-family: "Roboto_Regular" !important;
+  font-family: "Lato_Regular" !important;
   margin-top: 0;
 }
 
@@ -443,13 +415,13 @@ body h1,
 body h2,
 body h3,
 body h4 {
-  font-family: "Roboto_Regular" !important;
+  font-family: "Lato_Regular" !important;
   line-height: 1;
 }
 
 body strong,
 body b {
-  font-family: "Roboto_Medium" !important;
+  font-family: "Lato_Regular" !important;
   font-weight: normal;
 }
 
@@ -458,7 +430,7 @@ body h6 {
 }
 
 body ul {
-  font-family: "Roboto_Light" !important;
+  font-family: "Lato_Regular" !important;
   color: #D9D9D9 !important;
   margin: 5px 0;
   padding: 0 0 0 14px;
@@ -509,7 +481,7 @@ body video {
 }
 
 body span {
-  font-family: "Roboto_Regular" !important;
+  font-family: "Lato_Regular" !important;
   text-decoration: none !important;
 }
 

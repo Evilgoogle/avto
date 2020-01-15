@@ -51,9 +51,57 @@
         </ul>
     </nav>
 </header>
+
 <main>
     @yield('app_content')
 </main>
+
+<footer>
+    <div id="map"></div>
+    <div class="contain">
+        <div class="down">
+            <div class="bn">
+                <div class="box">
+                    <div class="title">О нас</div>
+                    <div class="text">We have an extensive range of products and services to arrange the funeral exactly as your loved one would have wished. The service that respects your wishes and allows loved ones to say a final farewell in the manner you have chosen.</div>
+                </div>
+            </div>
+            <div class="bn">
+                <div class="box">
+                    <div class="title">Навигация</div>
+                    <ul class="nav">
+                        <li><a href="#">Калькулятор</a></li>
+                        <li><a href="#">Примущества</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Документы</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bn">
+                <div class="box">
+                    <div class="title">AVTO</div>
+                    <div class="icon"></div>
+                </div>
+            </div>
+            <div class="bn">
+                <div class="box">
+                    <div class="title">Контакты</div>
+                    <address>Address: 4578 Marmora Road, Glasgow, D04 89GR</address>
+                    <br>
+                    <div class="contact_bn">
+                        <p>Телефон:</p>
+                        <a href="te:45" class="yellow">+7 705 458 48 72</a>
+                    </div>
+                    <br>
+                    <div class="contact_bn">
+                        <p>Email:</p>
+                        <a href="mailto:google@NAIL.RU" class="yellow">info@demolink.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <div class="overlay" id="overlay"></div>
 
