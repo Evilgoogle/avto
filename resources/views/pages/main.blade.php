@@ -46,6 +46,51 @@
         <h1>Автоломбард автобиля<br> Кредит на Авто</h1>
         <small>Получите деньги под залог автомобиля через 2 часа после обращения</small>
     </div>
+    <section class="section_imagetext">
+        <div class="contain">
+            <div class="block">
+                <div class="bn">
+                    <div class="team_header">
+                        <div class="block">
+                            <div class="line"></div>
+                            <div class="mini">Почему мы?</div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="text">AVTO - автокредит компания</div>
+                    </div>
+                </div>
+                <div class="text_block">
+                    <div class="texts">
+                        <div class="title">Автомобиль</div>
+                        <div class="text">
+                            <p>У каждого в жизни случаются такие ситуации, когда срочно нужны деньги, в таком случае многие люди, у которых есть машина, решают сдать её в круглосуточный автоломбард в Алматы.</p>
+                            <p>Однако каждый хочет быть уверен не только в том, что его не обманут, но и в профессионализме компании и качестве услуги, которое заключается в высокой оценке авто, низкой процентной ставке, быстрой выдаче займа и удобной оплате. Всё это вы можете найти в Белом Ломбарде!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_available">
+        <div class="team_header">
+            <div class="block">
+                <div class="line"></div>
+                <div class="mini">Примущество</div>
+                <div class="line"></div>
+            </div>
+            <div class="text">Наши примущество</div>
+        </div>
+        <div class="block_pictext">
+            @foreach($available as $item)
+                <div class="bn">
+                    <div class="box">
+                        <h2 class="title">{{ $item->title }}</h2>
+                        <div class="desc">{{ $item->desc }}</div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
     <section class="section_calculate">
         <div class="contain">
             <div class="team_header">
@@ -101,46 +146,6 @@
                     <div class="num"><span>NaN</span> ₸</div>
                     <button type="button" class="js_calc_ok"><span>Оставить заявку</span></button>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="section_available">
-        <div class="team_header">
-            <div class="block">
-                <div class="line"></div>
-                <div class="mini">Примущество</div>
-                <div class="line"></div>
-            </div>
-            <div class="text">Наши примущество</div>
-        </div>
-        <div class="block_pictext">
-            @foreach($available as $item)
-                <div class="bn">
-                    <div class="box">
-                        <h2 class="title">{{ $item->title }}</h2>
-                        <div class="desc">{{ $item->desc }}</div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </section>
-    <section class="section_imagetext">
-        <div class="contain">
-            <div class="team_header">
-                <div class="block">
-                    <div class="line"></div>
-                    <div class="mini">Почему мы?</div>
-                    <div class="line"></div>
-                </div>
-                <div class="text">AVTO - автокредит компания</div>
-            </div>
-            <div class="block">
-                <div class="bn">
-                    <div class="image"></div>
-                </div>
-                <div class="bn">
-                    <p>У каждого в жизни случаются такие ситуации, когда срочно нужны деньги, в таком случае многие люди, у которых есть машина, решают сдать её в круглосуточный автоломбард в Алматы.</p>
-                    <p>Однако каждый хочет быть уверен не только в том, что его не обманут, но и в профессионализме компании и качестве услуги, которое заключается в высокой оценке авто, низкой процентной ставке, быстрой выдаче займа и удобной оплате. Всё это вы можете найти в Белом Ломбарде!</div>
             </div>
         </div>
     </section>

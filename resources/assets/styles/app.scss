@@ -7,7 +7,7 @@
 
 /* basic */
 .contain {
-  max-width: 1640px;
+  max-width: 1600px;
   width: 100%;
   margin: auto;
   box-sizing: border-box;
@@ -57,13 +57,13 @@ body {
       padding: 0 55px;
       word-wrap: break-word;
       color: $color-yellow;
-      font-size: 23px;
+      font-size: 22px;
       text-transform: uppercase;
     }
   }
   .text {
     color: $color-white;
-    font-size: 53px;
+    font-size: 42px;
     text-align: center;
     margin-top: 20px;
     word-wrap: break-word;
@@ -180,7 +180,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-attachment: fixed;
   h1 {
     color: $color-white;
     text-align: center;
@@ -198,7 +197,6 @@ header {
   }
 }
 .section_calculate {
-  padding: 6vw 0 0;
   .contain {
     display: flex;
     background-color: $color-white;
@@ -209,12 +207,12 @@ header {
         margin: auto;
       }
       .mini {
-        font-size: 30px;
+        font-size: 22px;
       }
       .text {
         width: 80%;
-        margin: 30px auto 0;
-        font-size: 50px;
+        margin: 23px auto 0;
+        font-size: 42px;
         color: $color-black;
         font-family: $font-Lora_Regular;
       }
@@ -291,13 +289,13 @@ header {
                 .title {
                   text-transform: uppercase;
                   font-size: 18px;
-                  color: $color-gray;
+                  color: $color-brown;
                   margin-bottom: 15px;
                 }
                 .num {
                   font-size: 30px;
                   color: $color-gray;
-                  margin-bottom: 15px;
+                  margin-bottom: 10px;
                   display: flex;
                   position: relative;
                   span {
@@ -351,7 +349,7 @@ header {
                 height: 60px;
                 background-color: #FFFFFF;
                 padding: 0 20px !important;
-                border-radius: 10px;
+                border-radius: 3px;
                 border: none;
                 font-size: 30px;
                 color: #888888;
@@ -394,49 +392,89 @@ header {
   }
 }
 .section_available {
-  padding-top: 7vw;
+  padding: 6vw;
   @include img_cover('../images/avai_fon.jpg');
 }
 .section_imagetext {
-  margin: 6vw 0 1vw;
+  padding: 6vw 0 0;
   .contain {
-    background-color: $color-yellow-lite;
-    padding: 2vw 0;
-    box-sizing: border-box;
-    .team_header {
-      width: 50%;
-      .block {
-        width: 60%;
-        margin: auto;
-      }
-      .mini {
-        font-size: 30px;
-      }
-      .text {
-        width: 50%;
-        margin: 30px auto 0;
-        font-size: 50px;
-        color: $color-black;
-        font-family: $font-Lora_Regular;
-      }
-      .pic {
-        width: 100%;
-        height: 18vw;
-        @include img_contain("../images/avto_pic.png");
-        margin-top: 30px;
-      }
-    }
     .block {
-      width: 90%;
       margin: auto;
       display: flex;
-      .bn {
+      background-color: $color-white;
+      .text_block {
         width: 50%;
         color: $color-brown;
-        padding: 50px;
+        padding: 10vw 2vw;
         font-size: 22px;
-        .image {
-          height: 10vw;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          @include img_cover("../images/imagetext_fon.jpg");
+          @include position_abs;
+        }
+        .texts {
+          width: 70%;
+          position: relative;
+          z-index: 1;
+          font-family: $font-Lora_Regular;
+          .title {
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+          }
+          .text {
+            text-align: initial;
+            margin-top: 30px;
+            line-height: 1.6;
+          }
+        }
+      }
+      .bn {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          @include img_contain("../images/avto_graf.png");
+          @include position_abs;
+          opacity: 0.4;
+        }
+        .team_header {
+          width: 70%;
+          .block {
+            width: 80%;
+            margin: auto;
+            background-color: transparent;
+          }
+          .mini {
+            font-size: 22px;
+          }
+          .text {
+            width: 80%;
+            margin: 23px auto 0;
+            font-size: 42px;
+            color: $color-black;
+            font-family: $font-Lora_Regular;
+          }
+          .pic {
+            width: 100%;
+            height: 18vw;
+            @include img_contain("../images/avto_pic.png");
+            margin-top: 30px;
+          }
         }
       }
     }

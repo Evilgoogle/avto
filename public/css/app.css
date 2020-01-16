@@ -5344,7 +5344,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
 /* basic */
 
 .contain {
-  max-width: 1640px;
+  max-width: 1600px;
   width: 100%;
   margin: auto;
   -webkit-box-sizing: border-box;
@@ -5421,13 +5421,13 @@ body {
   padding: 0 55px;
   word-wrap: break-word;
   color: #ad957b;
-  font-size: 23px;
+  font-size: 22px;
   text-transform: uppercase;
 }
 
 .team_header .text {
   color: #D9D9D9;
-  font-size: 53px;
+  font-size: 42px;
   text-align: center;
   margin-top: 20px;
   word-wrap: break-word;
@@ -5624,7 +5624,6 @@ header nav ul li .active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-attachment: fixed;
 }
 
 .section_main h1 {
@@ -5644,10 +5643,6 @@ header nav ul li .active {
   color: #D9D9D9;
 }
 
-.section_calculate {
-  padding: 6vw 0 0;
-}
-
 .section_calculate .contain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5665,13 +5660,13 @@ header nav ul li .active {
 }
 
 .section_calculate .contain .team_header .mini {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .section_calculate .contain .team_header .text {
   width: 80%;
-  margin: 30px auto 0;
-  font-size: 50px;
+  margin: 23px auto 0;
+  font-size: 42px;
   color: #1D1D1E;
   font-family: "Lora_Regular";
 }
@@ -5777,14 +5772,14 @@ header nav ul li .active {
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .title {
   text-transform: uppercase;
   font-size: 18px;
-  color: #888888;
+  color: #1c1c1c;
   margin-bottom: 15px;
 }
 
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .num {
   font-size: 30px;
   color: #888888;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5851,7 +5846,7 @@ header nav ul li .active {
   height: 60px;
   background-color: #FFFFFF;
   padding: 0 20px !important;
-  border-radius: 10px;
+  border-radius: 3px;
   border: none;
   font-size: 30px;
   color: #888888;
@@ -5901,68 +5896,128 @@ header nav ul li .active {
 }
 
 .section_available {
-  padding-top: 7vw;
+  padding: 6vw;
   background: url(/images/avai_fon.jpg?9e6c0dd0362444d748df453811b511b2) no-repeat center;
   background-size: cover;
 }
 
 .section_imagetext {
-  margin: 6vw 0 1vw;
+  padding: 6vw 0 0;
 }
 
-.section_imagetext .contain {
-  background-color: #dfd8d2;
-  padding: 2vw 0;
+.section_imagetext .contain .block {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #D9D9D9;
+}
+
+.section_imagetext .contain .block .text_block {
+  width: 50%;
+  color: #1c1c1c;
+  padding: 10vw 2vw;
+  font-size: 22px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.section_imagetext .contain .team_header {
-  width: 50%;
+.section_imagetext .contain .block .text_block:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/images/imagetext_fon.jpg?91187e994d0055240e36e40f3f18ad75) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
-.section_imagetext .contain .team_header .block {
-  width: 60%;
-  margin: auto;
+.section_imagetext .contain .block .text_block .texts {
+  width: 70%;
+  position: relative;
+  z-index: 1;
+  font-family: "Lora_Regular";
 }
 
-.section_imagetext .contain .team_header .mini {
+.section_imagetext .contain .block .text_block .texts .title {
   font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.section_imagetext .contain .team_header .text {
+.section_imagetext .contain .block .text_block .texts .text {
+  text-align: initial;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.section_imagetext .contain .block .bn {
   width: 50%;
-  margin: 30px auto 0;
-  font-size: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.section_imagetext .contain .block .bn:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/images/avto_graf.png?55fda13912ae277cd6d7fcfc87a8ace9) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.section_imagetext .contain .block .bn .team_header {
+  width: 70%;
+}
+
+.section_imagetext .contain .block .bn .team_header .block {
+  width: 80%;
+  margin: auto;
+  background-color: transparent;
+}
+
+.section_imagetext .contain .block .bn .team_header .mini {
+  font-size: 22px;
+}
+
+.section_imagetext .contain .block .bn .team_header .text {
+  width: 80%;
+  margin: 23px auto 0;
+  font-size: 42px;
   color: #1D1D1E;
   font-family: "Lora_Regular";
 }
 
-.section_imagetext .contain .team_header .pic {
+.section_imagetext .contain .block .bn .team_header .pic {
   width: 100%;
   height: 18vw;
   background: url(/images/avto_pic.png?7857296de6fd560edfd806b3965257ea) no-repeat center;
   background-size: contain;
   margin-top: 30px;
-}
-
-.section_imagetext .contain .block {
-  width: 90%;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.section_imagetext .contain .block .bn {
-  width: 50%;
-  color: #1c1c1c;
-  padding: 50px;
-  font-size: 22px;
-}
-
-.section_imagetext .contain .block .bn .image {
-  height: 10vw;
 }
 
 .section_docs {
