@@ -5389,6 +5389,7 @@ body {
   transition: all 0.3s ease-out;
   border-radius: 4px;
   font-size: 20px;
+  font-family: "Lato_Regular";
 }
 
 .team_button:hover {
@@ -5465,6 +5466,7 @@ body {
 }
 
 .block_pictext .bn .box .title {
+  height: 50px;
   font-size: 30px;
   margin-top: 30px;
   color: #ad957b;
@@ -5968,30 +5970,31 @@ header nav ul li .active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .section_imagetext .contain .block .bn:before {
   content: '';
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 50%;
   background: url(/images/avto_graf.png?55fda13912ae277cd6d7fcfc87a8ace9) no-repeat center;
   background-size: contain;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  opacity: 0.4;
+  opacity: 0.25;
 }
 
 .section_imagetext .contain .block .bn .team_header {
   width: 70%;
+  margin: 20%auto 40px;
 }
 
 .section_imagetext .contain .block .bn .team_header .block {
@@ -6024,6 +6027,56 @@ header nav ul li .active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 5vw 0;
+}
+
+.section_docs .block_pictext .bn .title {
+  width: 80%;
+  margin: 40px auto;
+  font-size: 28px;
+}
+
+.section_fontext {
+  height: 80vh;
+  background: url(/images/down_fon.jpg?39235a68e8b7b46b0e8c9ef1fc2cd6e0) no-repeat center;
+  background-size: cover;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  font-family: "Lora_Regular";
+}
+
+.section_fontext .title {
+  font-size: 60px;
+}
+
+.section_fontext .block_box {
+  width: 60%;
+  margin: auto;
+  border: 1px solid #D9D9D9;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 4vw;
+  font-size: 30px;
+}
+
+.section_fontext .text {
+  width: 70%;
+  margin: 2vw auto 0;
+  font-size: 25px;
+  font-family: "Lato_Regular";
+}
+
+.section_fontext button {
+  margin: 2vw auto;
 }
 
 .section_404 img {
