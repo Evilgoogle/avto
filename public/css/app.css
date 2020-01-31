@@ -5351,6 +5351,36 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
           box-sizing: border-box;
 }
 
+@media only screen and (max-width: 1919px) {
+  .contain {
+    max-width: 1400px;
+  }
+}
+
+@media only screen and (max-width: 1599px) {
+  .contain {
+    max-width: 1280px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .contain {
+    max-width: 1180px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .contain {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .contain {
+    max-width: 920px;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .contain {
     max-width: 100%;
@@ -5365,6 +5395,12 @@ body {
   font-size: 20px;
   position: relative;
   font-family: "Lato_Regular";
+}
+
+@media only screen and (max-width: 1279px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 .team_button {
@@ -5392,6 +5428,13 @@ body {
   font-family: "Lato_Regular";
 }
 
+@media only screen and (max-width: 1599px) {
+  .team_button {
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
 .team_button:hover {
   background-color: #D9D9D9;
   color: #1c1c1c;
@@ -5401,6 +5444,12 @@ body {
   width: 50%;
   margin: 50px auto 40px;
   text-align: center;
+}
+
+@media only screen and (max-width: 1279px) {
+  .team_header {
+    margin: 20px auto 35px;
+  }
 }
 
 .team_header .block {
@@ -5426,6 +5475,18 @@ body {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 1919px) {
+  .team_header .block .mini {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .team_header .block .mini {
+    font-size: 18px;
+  }
+}
+
 .team_header .text {
   color: #D9D9D9;
   font-size: 42px;
@@ -5436,6 +5497,18 @@ body {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 1919px) {
+  .team_header .text {
+    font-size: 37px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .team_header .text {
+    font-size: 28px;
+  }
+}
+
 .block_pictext {
   width: 80%;
   margin: auto;
@@ -5444,6 +5517,12 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1279px) {
+  .block_pictext {
+    width: 100%;
+  }
 }
 
 .block_pictext .bn {
@@ -5473,6 +5552,19 @@ body {
   font-family: "Lora_Regular";
 }
 
+@media only screen and (max-width: 1919px) {
+  .block_pictext .bn .box .title {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .block_pictext .bn .box .title {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+}
+
 .block_pictext .bn .box .desc {
   margin-top: 30px;
   color: #888888;
@@ -5489,6 +5581,12 @@ h4 {
 
 header .top {
   height: 60px;
+}
+
+@media only screen and (max-width: 1599px) {
+  header .top {
+    height: 50px;
+  }
 }
 
 header .top .contain {
@@ -5546,14 +5644,28 @@ header .logo {
   border-bottom: 1px solid #322f32;
 }
 
+@media only screen and (max-width: 1599px) {
+  header .logo {
+    height: 70px;
+  }
+}
+
 header .logo a {
   width: 265px;
   margin: 20px auto;
   display: block;
 }
 
+@media only screen and (max-width: 1599px) {
+  header .logo a {
+    width: 230px;
+    margin: 0 auto;
+  }
+}
+
 header .logo a img {
   width: 100%;
+  margin-top: -3px;
 }
 
 header nav {
@@ -5569,6 +5681,12 @@ header nav {
   height: 75px;
   border-bottom: 1px solid #322f32;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 1599px) {
+  header nav {
+    height: 65px;
+  }
 }
 
 header nav .mobile_menu {
@@ -5636,6 +5754,18 @@ header nav ul li .active {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 1919px) {
+  .section_main h1 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1599px) {
+  .section_main h1 {
+    font-size: 40px;
+  }
+}
+
 .section_main small {
   width: 70%;
   margin: 2vw auto;
@@ -5643,6 +5773,19 @@ header nav ul li .active {
   text-align: center;
   font-size: 25px;
   color: #D9D9D9;
+}
+
+@media only screen and (max-width: 1919px) {
+  .section_main small {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1599px) {
+  .section_main small {
+    font-size: 20px;
+    margin: 1vw auto;
+  }
 }
 
 .section_calculate .contain {
@@ -5656,13 +5799,38 @@ header nav ul li .active {
   width: 50%;
 }
 
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .team_header {
+    margin-top: 40px;
+  }
+}
+
 .section_calculate .contain .team_header .block {
   width: 60%;
   margin: auto;
 }
 
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .team_header .block {
+    width: 80%;
+  }
+}
+
 .section_calculate .contain .team_header .mini {
   font-size: 22px;
+}
+
+@media only screen and (max-width: 1919px) {
+  .section_calculate .contain .team_header .mini {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .team_header .mini {
+    padding: 0 30px;
+    font-size: 18px;
+  }
 }
 
 .section_calculate .contain .team_header .text {
@@ -5673,12 +5841,30 @@ header nav ul li .active {
   font-family: "Lora_Regular";
 }
 
+@media only screen and (max-width: 1919px) {
+  .section_calculate .contain .team_header .text {
+    font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .team_header .text {
+    font-size: 25px;
+  }
+}
+
 .section_calculate .contain .team_header .pic {
   width: 100%;
   height: 18vw;
   background: url(/images/avto_pic.png?7857296de6fd560edfd806b3965257ea) no-repeat center;
   background-size: contain;
   margin-top: 30px;
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .team_header .pic {
+    height: 24vw;
+  }
 }
 
 .section_calculate .contain .calc_container {
@@ -5749,6 +5935,12 @@ header nav ul li .active {
   padding: 60px 0;
 }
 
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .calc_container .calc_top .calc_top_inputs {
+    padding: 34px 0;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5764,6 +5956,15 @@ header nav ul li .active {
   width: 90%;
 }
 
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc {
   width: 45%;
   margin-bottom: 50px;
@@ -5771,11 +5972,25 @@ header nav ul li .active {
           box-sizing: border-box;
 }
 
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc {
+    width: 93%;
+    margin-bottom: 35px;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .title {
   text-transform: uppercase;
   font-size: 18px;
   color: #1c1c1c;
   margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .title {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
 }
 
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .num {
@@ -5786,6 +6001,12 @@ header nav ul li .active {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .num {
+    font-size: 24px;
+  }
 }
 
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .num span {
@@ -5854,6 +6075,13 @@ header nav ul li .active {
   color: #888888;
 }
 
+@media only screen and (max-width: 1366px) {
+  .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc input {
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_bottom {
   background-color: #ad957b;
   background-size: cover;
@@ -5868,10 +6096,22 @@ header nav ul li .active {
   text-align: center;
 }
 
+@media only screen and (max-width: 1366px) {
+  .section_calculate .contain .calc_container .calc_bottom .title {
+    font-size: 25px;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_bottom .num {
   color: white;
   font-size: 50px;
   text-align: center;
+}
+
+@media only screen and (max-width: 1366px) {
+  .section_calculate .contain .calc_container .calc_bottom .num {
+    font-size: 45px;
+  }
 }
 
 .section_calculate .contain .calc_container .calc_bottom .js_calc_ok {
@@ -5934,6 +6174,12 @@ header nav ul li .active {
           align-items: center;
 }
 
+@media only screen and (max-width: 1279px) {
+  .section_imagetext .contain .block .text_block {
+    font-size: 19px;
+  }
+}
+
 .section_imagetext .contain .block .text_block:before {
   content: '';
   display: block;
@@ -5953,16 +6199,34 @@ header nav ul li .active {
   font-family: "Lora_Regular";
 }
 
+@media only screen and (max-width: 1599px) {
+  .section_imagetext .contain .block .text_block .texts {
+    width: 80%;
+  }
+}
+
 .section_imagetext .contain .block .text_block .texts .title {
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 1599px) {
+  .section_imagetext .contain .block .text_block .texts .title {
+    font-size: 27px;
+  }
+}
+
 .section_imagetext .contain .block .text_block .texts .text {
   text-align: initial;
   margin-top: 30px;
   line-height: 1.6;
+}
+
+@media only screen and (max-width: 1599px) {
+  .section_imagetext .contain .block .text_block .texts .text {
+    margin-top: 28px;
+  }
 }
 
 .section_imagetext .contain .block .bn {
@@ -6007,12 +6271,24 @@ header nav ul li .active {
   font-size: 22px;
 }
 
+@media only screen and (max-width: 1599px) {
+  .section_imagetext .contain .block .bn .team_header .mini {
+    font-size: 20px;
+  }
+}
+
 .section_imagetext .contain .block .bn .team_header .text {
   width: 80%;
   margin: 23px auto 0;
   font-size: 42px;
   color: #1D1D1E;
   font-family: "Lora_Regular";
+}
+
+@media only screen and (max-width: 1599px) {
+  .section_imagetext .contain .block .bn .team_header .text {
+    font-size: 34px;
+  }
 }
 
 .section_imagetext .contain .block .bn .team_header .pic {
@@ -6035,6 +6311,18 @@ header nav ul li .active {
   font-size: 28px;
 }
 
+@media only screen and (max-width: 1366px) {
+  .section_docs .block_pictext .bn .title {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_docs .block_pictext .bn .title {
+    font-size: 23px;
+  }
+}
+
 .section_fontext {
   height: 80vh;
   background: url(/images/down_fon.jpg?39235a68e8b7b46b0e8c9ef1fc2cd6e0) no-repeat center;
@@ -6053,8 +6341,26 @@ header nav ul li .active {
   font-family: "Lora_Regular";
 }
 
+@media only screen and (max-width: 1366px) {
+  .section_fontext {
+    height: 100vh;
+  }
+}
+
 .section_fontext .title {
   font-size: 60px;
+}
+
+@media only screen and (max-width: 1919px) {
+  .section_fontext .title {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .section_fontext .title {
+    font-size: 45px;
+  }
 }
 
 .section_fontext .block_box {
@@ -6068,11 +6374,37 @@ header nav ul li .active {
   font-size: 30px;
 }
 
+@media only screen and (max-width: 1919px) {
+  .section_fontext .block_box {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .section_fontext .block_box {
+    padding: 15px;
+    font-size: 21px;
+  }
+}
+
 .section_fontext .text {
   width: 70%;
   margin: 2vw auto 0;
   font-size: 25px;
   font-family: "Lato_Regular";
+}
+
+@media only screen and (max-width: 1919px) {
+  .section_fontext .text {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_fontext .text {
+    width: 80%;
+    margin: 4vw auto 0;
+  }
 }
 
 .section_fontext button {

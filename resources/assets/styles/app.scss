@@ -11,6 +11,21 @@
   width: 100%;
   margin: auto;
   box-sizing: border-box;
+  @include respond-to(w-1919) {
+    max-width: 1400px;
+  }
+  @include respond-to(w-1599) {
+    max-width: 1280px;
+  }
+  @include respond-to(w-1366) {
+    max-width: 1180px;
+  }
+  @include respond-to(w-1280) {
+    max-width: 1140px;
+  }
+  @include respond-to(w-1279) {
+    max-width: 920px;
+  }
   @include respond-to(w-1023) {
     max-width: 100%;
     padding-left: 55px;
@@ -23,6 +38,9 @@ body {
   font-size: 20px;
   position: relative;
   font-family: $font-Lato_Regular;
+  @include respond-to(w-1279) {
+    font-size: 18px;
+  }
 }
 .team_button {
   @include button_reset;
@@ -37,6 +55,10 @@ body {
   border-radius: 4px;
   font-size: 20px;
   font-family: $font-Lato_Regular;
+  @include respond-to(w-1599) {
+    height: 40px;
+    font-size: 18px;
+  }
   &:hover {
     background-color: $color-white;
     color: $color-brown;
@@ -46,6 +68,9 @@ body {
   width: 50%;
   margin: 50px auto 40px;
   text-align: center;
+  @include respond-to(w-1279) {
+    margin: 20px auto 35px;
+  }
   .block {
     display: flex;
     align-items: center;
@@ -60,6 +85,12 @@ body {
       color: $color-yellow;
       font-size: 22px;
       text-transform: uppercase;
+      @include respond-to(w-1919) {
+        font-size: 20px;
+      }
+      @include respond-to(w-1279) {
+        font-size: 18px;
+      }
     }
   }
   .text {
@@ -70,6 +101,12 @@ body {
     word-wrap: break-word;
     font-family: $font-Lora_Regular;
     text-transform: uppercase;
+    @include respond-to(w-1919) {
+      font-size: 37px;
+    }
+    @include respond-to(w-1279) {
+      font-size: 28px;
+    }
   }
 }
 .block_pictext {
@@ -77,6 +114,9 @@ body {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  @include respond-to(w-1279) {
+    width: 100%;
+  }
   .bn {
     width: 33.3%;
     padding: 30px;
@@ -95,6 +135,13 @@ body {
         margin-top: 30px;
         color: $color-yellow;
         font-family: $font-Lora_Regular;
+        @include respond-to(w-1919) {
+          font-size: 28px;
+        }
+        @include respond-to(w-1279) {
+          font-size: 25px;
+          margin-top: 10px;
+        }
       }
       .desc {
         margin-top: 30px;
@@ -110,6 +157,9 @@ h1, h2, h3, h4 {
 header {
   .top {
     height: 60px;
+    @include respond-to(w-1599) {
+      height: 50px;
+    }
     .contain {
       height: 100%;
       display: flex;
@@ -136,12 +186,20 @@ header {
   .logo {
     height: 100px;
     border-bottom: 1px solid#322f32;
+    @include respond-to(w-1599) {
+      height: 70px
+    }
     a {
       width: 265px;
       margin: 20px auto;
       display: block;
+      @include respond-to(w-1599) {
+        width: 230px;
+        margin: 0 auto;
+      }
       img {
         width: 100%;
+        margin-top: -3px;
       }
     }
   }
@@ -152,6 +210,9 @@ header {
     height: 75px;
     border-bottom: 1px solid#322f32;
     font-size: 16px;
+    @include respond-to(w-1599) {
+      height: 65px;
+    }
     .mobile_menu {
       display: none;
       margin: 15px auto;
@@ -188,6 +249,12 @@ header {
     font-size: 60px;
     font-family: $font-Lora_Regular;
     text-transform: uppercase;
+    @include respond-to(w-1919) {
+      font-size: 50px;
+    }
+    @include respond-to(w-1599) {
+      font-size: 40px;
+    }
   }
   small {
     width: 70%;
@@ -196,6 +263,13 @@ header {
     text-align: center;
     font-size: 25px;
     color: $color-white;
+    @include respond-to(w-1919) {
+      font-size: 22px;
+    }
+    @include respond-to(w-1599) {
+      font-size: 20px;
+      margin: 1vw auto;
+    }
   }
 }
 .section_calculate {
@@ -204,12 +278,25 @@ header {
     background-color: $color-white;
     .team_header {
       width: 50%;
+      @include respond-to(w-1279) {
+        margin-top: 40px;
+      }
       .block {
         width: 60%;
         margin: auto;
+        @include respond-to(w-1279) {
+          width: 80%;
+        }
       }
       .mini {
         font-size: 22px;
+        @include respond-to(w-1919) {
+          font-size: 20px;
+        }
+        @include respond-to(w-1279) {
+          padding: 0 30px;
+          font-size: 18px;
+        }
       }
       .text {
         width: 80%;
@@ -217,12 +304,21 @@ header {
         font-size: 42px;
         color: $color-black;
         font-family: $font-Lora_Regular;
+        @include respond-to(w-1919) {
+          font-size: 34px;
+        }
+        @include respond-to(w-1279) {
+          font-size: 25px;
+        }
       }
       .pic {
         width: 100%;
         height: 18vw;
         @include img_contain("../images/avto_pic.png");
         margin-top: 30px;
+        @include respond-to(w-1279) {
+          height: 24vw;
+        }
       }
     }
     .calc_container {
@@ -275,6 +371,9 @@ header {
         .calc_top_inputs {
           border-top: 1px solid $color-gray;
           padding: 60px 0;
+          @include respond-to(w-1279) {
+            padding: 34px 0;
+          }
           .ul-input {
             display: flex;
             flex-wrap: wrap;
@@ -283,16 +382,27 @@ header {
             margin: 0;
             justify-content: space-between;
             width: 90%;
+            @include respond-to(w-1279) {
+              flex-direction: column;
+            }
             .li-input-calc {
               width: 45%;
               margin-bottom: 50px;
               box-sizing: border-box;
+              @include respond-to(w-1279) {
+                width: 93%;
+                margin-bottom: 35px;
+              }
               .calc-ui-slider-val {
                 .title {
                   text-transform: uppercase;
                   font-size: 18px;
                   color: $color-brown;
                   margin-bottom: 15px;
+                  @include respond-to(w-1279) {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                  }
                 }
                 .num {
                   font-size: 30px;
@@ -300,6 +410,9 @@ header {
                   margin-bottom: 10px;
                   display: flex;
                   position: relative;
+                  @include respond-to(w-1279) {
+                    font-size: 24px;
+                  }
                   span {
                     margin-right: 5px;
                   }
@@ -355,6 +468,10 @@ header {
                 border: none;
                 font-size: 30px;
                 color: #888888;
+                @include respond-to(w-1366) {
+                  height: 50px;
+                  font-size: 20px;
+                }
               }
             }
           }
@@ -370,11 +487,17 @@ header {
           text-transform: uppercase;
           margin-bottom: 5px;
           text-align: center;
+          @include respond-to(w-1366) {
+            font-size: 25px;
+          }
         }
         .num {
           color: white;
           font-size: 50px;
           text-align: center;
+          @include respond-to(w-1366) {
+            font-size: 45px;
+          }
         }
         .js_calc_ok {
           @include button_reset;
@@ -414,6 +537,9 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include respond-to(w-1279) {
+          font-size: 19px;
+        }
         &:before {
           content: '';
           display: block;
@@ -427,15 +553,24 @@ header {
           position: relative;
           z-index: 1;
           font-family: $font-Lora_Regular;
+          @include respond-to(w-1599) {
+            width: 80%;
+          }
           .title {
             font-size: 30px;
             text-align: center;
             text-transform: uppercase;
+            @include respond-to(w-1599) {
+              font-size: 27px;
+            }
           }
           .text {
             text-align: initial;
             margin-top: 30px;
             line-height: 1.6;
+            @include respond-to(w-1599) {
+              margin-top: 28px;
+            }
           }
         }
       }
@@ -463,6 +598,9 @@ header {
           }
           .mini {
             font-size: 22px;
+            @include respond-to(w-1599) {
+              font-size: 20px;
+            }
           }
           .text {
             width: 80%;
@@ -470,6 +608,9 @@ header {
             font-size: 42px;
             color: $color-black;
             font-family: $font-Lora_Regular;
+            @include respond-to(w-1599) {
+              font-size: 34px;
+            }
           }
           .pic {
             width: 100%;
@@ -491,6 +632,12 @@ header {
       width: 80%;
       margin: 40px auto;
       font-size: 28px;
+       @include respond-to(w-1366) {
+         font-size: 25px;
+       }
+       @include respond-to(w-1279) {
+         font-size: 23px;
+       }
      } 
     }
   }
@@ -504,8 +651,17 @@ header {
   align-items: center;
   color: #ffffff;
   font-family: $font-Lora_Regular;
+  @include respond-to(w-1366) {
+    height: 100vh;
+  }
   .title {
-    font-size: 60px
+    font-size: 60px;
+    @include respond-to(w-1919) {
+      font-size: 50px;
+    }
+    @include respond-to(w-1366) {
+      font-size: 45px;
+    }
   }
   .block_box {
     width: 60%;
@@ -515,12 +671,26 @@ header {
     box-sizing: border-box;
     margin-top: 4vw;
     font-size: 30px;
+    @include respond-to(w-1919) {
+      font-size: 24px;
+    }
+    @include respond-to(w-1366) {
+      padding: 15px;
+      font-size: 21px;
+    }
   }
   .text {
     width: 70%;
     margin: 2vw auto 0;
     font-size: 25px;
-    font-family: $font-Lato_Regular
+    font-family: $font-Lato_Regular;
+    @include respond-to(w-1919) {
+      font-size: 22px;
+    }
+    @include respond-to(w-1279) {
+      width: 80%;
+      margin: 4vw auto 0;
+    }
   }
   button {
     margin: 2vw auto;
