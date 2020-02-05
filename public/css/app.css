@@ -5403,6 +5403,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 17px;
+  }
+}
+
 .team_button {
   outline: none;
   background-color: transparent;
@@ -5449,6 +5455,13 @@ body {
 @media only screen and (max-width: 1279px) {
   .team_header {
     margin: 20px auto 35px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .team_header {
+    width: 60%;
+    margin: 10px auto 20px;
   }
 }
 
@@ -5509,6 +5522,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .team_header .text {
+    font-size: 24px;
+  }
+}
+
 .block_pictext {
   width: 80%;
   margin: auto;
@@ -5530,6 +5549,12 @@ body {
   padding: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1023px) {
+  .block_pictext .bn {
+    padding: 20px;
+  }
 }
 
 .block_pictext .bn .box {
@@ -5562,6 +5587,12 @@ body {
   .block_pictext .bn .box .title {
     font-size: 25px;
     margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .block_pictext .bn .box .title {
+    font-size: 22px;
   }
 }
 
@@ -5694,7 +5725,7 @@ header nav .mobile_menu {
   margin: 15px auto;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 639px) {
   header nav .mobile_menu {
     display: block;
   }
@@ -5746,6 +5777,18 @@ header nav ul li .active {
           justify-content: center;
 }
 
+@media only screen and (max-width: 1279px) {
+  .section_main {
+    height: 75vh;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_main {
+    height: 430px;
+  }
+}
+
 .section_main h1 {
   color: #D9D9D9;
   text-align: center;
@@ -5763,6 +5806,18 @@ header nav ul li .active {
 @media only screen and (max-width: 1599px) {
   .section_main h1 {
     font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_main h1 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_main h1 {
+    font-size: 31px;
   }
 }
 
@@ -5785,6 +5840,13 @@ header nav ul li .active {
   .section_main small {
     font-size: 20px;
     margin: 1vw auto;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .section_main small {
+    font-size: 18px;
+    margin: 10px auto;
   }
 }
 
@@ -5882,6 +5944,14 @@ header nav ul li .active {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 1023px) {
+  .section_calculate .contain .calc_container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20px;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_top .calc_top_radio {
   padding: 40px 0;
 }
@@ -5941,6 +6011,12 @@ header nav ul li .active {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .section_calculate .contain .calc_container .calc_top .calc_top_inputs {
+    padding: 34px 0 0;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5965,8 +6041,14 @@ header nav ul li .active {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input {
+    width: 100%;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc {
-  width: 45%;
+  width: 47%;
   margin-bottom: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5974,7 +6056,7 @@ header nav ul li .active {
 
 @media only screen and (max-width: 1279px) {
   .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc {
-    width: 93%;
+    width: 100%;
     margin-bottom: 35px;
   }
 }
@@ -6009,10 +6091,6 @@ header nav ul li .active {
   }
 }
 
-.section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .num span {
-  margin-right: 5px;
-}
-
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .num input {
   width: 100%;
   color: inherit;
@@ -6023,7 +6101,7 @@ header nav ul li .active {
 
 .section_calculate .contain .calc_container .calc_top .calc_top_inputs .ul-input .li-input-calc .calc-ui-slider-val .num .cost-txt {
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 10px;
 }
 
@@ -6073,6 +6151,8 @@ header nav ul li .active {
   border: none;
   font-size: 30px;
   color: #888888;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -6102,6 +6182,12 @@ header nav ul li .active {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .section_calculate .contain .calc_container .calc_bottom .title {
+    font-size: 20px;
+  }
+}
+
 .section_calculate .contain .calc_container .calc_bottom .num {
   color: white;
   font-size: 50px;
@@ -6111,6 +6197,12 @@ header nav ul li .active {
 @media only screen and (max-width: 1366px) {
   .section_calculate .contain .calc_container .calc_bottom .num {
     font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_calculate .contain .calc_container .calc_bottom .num {
+    font-size: 32px;
   }
 }
 
@@ -6135,6 +6227,14 @@ header nav ul li .active {
       -ms-flex-align: center;
           align-items: center;
   margin: 30px auto 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_calculate .contain .calc_container .calc_bottom .js_calc_ok {
+    border-radius: 0;
+    font-size: 21px;
+    margin: 20px auto 0;
+  }
 }
 
 .section_available {
@@ -6180,6 +6280,13 @@ header nav ul li .active {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .section_imagetext .contain .block .text_block {
+    font-size: 17px;
+    padding: 7vw 2vw;
+  }
+}
+
 .section_imagetext .contain .block .text_block:before {
   content: '';
   display: block;
@@ -6214,6 +6321,12 @@ header nav ul li .active {
 @media only screen and (max-width: 1599px) {
   .section_imagetext .contain .block .text_block .texts .title {
     font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_imagetext .contain .block .text_block .texts .title {
+    font-size: 25px;
   }
 }
 
@@ -6261,10 +6374,23 @@ header nav ul li .active {
   margin: 20%auto 40px;
 }
 
+@media only screen and (max-width: 1023px) {
+  .section_imagetext .contain .block .bn .team_header {
+    width: 90%;
+    margin: 15% auto 10px;
+  }
+}
+
 .section_imagetext .contain .block .bn .team_header .block {
   width: 80%;
   margin: auto;
   background-color: transparent;
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_imagetext .contain .block .bn .team_header .block {
+    width: 90%;
+  }
 }
 
 .section_imagetext .contain .block .bn .team_header .mini {
@@ -6274,6 +6400,13 @@ header nav ul li .active {
 @media only screen and (max-width: 1599px) {
   .section_imagetext .contain .block .bn .team_header .mini {
     font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_imagetext .contain .block .bn .team_header .mini {
+    font-size: 18px;
+    padding: 0 40px;
   }
 }
 
@@ -6288,6 +6421,12 @@ header nav ul li .active {
 @media only screen and (max-width: 1599px) {
   .section_imagetext .contain .block .bn .team_header .text {
     font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_imagetext .contain .block .bn .team_header .text {
+    font-size: 28px;
   }
 }
 
@@ -6320,6 +6459,13 @@ header nav ul li .active {
 @media only screen and (max-width: 1279px) {
   .section_docs .block_pictext .bn .title {
     font-size: 23px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section_docs .block_pictext .bn .title {
+    margin: 30px auto;
+    font-size: 20px;
   }
 }
 

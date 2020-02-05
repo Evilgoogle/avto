@@ -41,6 +41,9 @@ body {
   @include respond-to(w-1279) {
     font-size: 18px;
   }
+  @include respond-to(w-1023) {
+    font-size: 17px;
+  }
 }
 .team_button {
   @include button_reset;
@@ -70,6 +73,10 @@ body {
   text-align: center;
   @include respond-to(w-1279) {
     margin: 20px auto 35px;
+  }
+  @include respond-to(w-1023) {
+    width: 60%;
+    margin: 10px auto 20px;
   }
   .block {
     display: flex;
@@ -107,6 +114,9 @@ body {
     @include respond-to(w-1279) {
       font-size: 28px;
     }
+    @include respond-to(w-1023) {
+      font-size: 24px;
+    }
   }
 }
 .block_pictext {
@@ -121,6 +131,9 @@ body {
     width: 33.3%;
     padding: 30px;
     box-sizing: border-box;
+    @include respond-to(w-1023) {
+      padding: 20px;
+    }
     .box {
       text-align: center;
       .image {
@@ -141,6 +154,9 @@ body {
         @include respond-to(w-1279) {
           font-size: 25px;
           margin-top: 10px;
+        }
+        @include respond-to(w-1023) {
+          font-size: 22px;
         }
       }
       .desc {
@@ -216,7 +232,7 @@ header {
     .mobile_menu {
       display: none;
       margin: 15px auto;
-      @include respond-to(w-1023) {
+      @include respond-to(w-639) {
         display: block;
       }
     }
@@ -243,6 +259,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include respond-to(w-1279) {
+    height: 75vh;
+  }
+  @include respond-to(w-1023) {
+    height: 430px;
+  }
   h1 {
     color: $color-white;
     text-align: center;
@@ -254,6 +276,12 @@ header {
     }
     @include respond-to(w-1599) {
       font-size: 40px;
+    }
+    @include respond-to(w-1279) {
+      font-size: 35px;
+    }
+    @include respond-to(w-1023) {
+      font-size: 31px;
     }
   }
   small {
@@ -269,6 +297,10 @@ header {
     @include respond-to(w-1599) {
       font-size: 20px;
       margin: 1vw auto;
+    }
+    @include respond-to(w-1279) {
+      font-size: 18px;
+      margin: 10px auto;
     }
   }
 }
@@ -327,6 +359,10 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @include respond-to(w-1023) {
+        box-sizing: border-box;
+        padding-left: 20px;
+      }
       .calc_top {
         .calc_top_radio {
           padding: 40px 0;
@@ -374,6 +410,9 @@ header {
           @include respond-to(w-1279) {
             padding: 34px 0;
           }
+          @include respond-to(w-1023) {
+            padding: 34px 0 0;
+          }
           .ul-input {
             display: flex;
             flex-wrap: wrap;
@@ -385,12 +424,15 @@ header {
             @include respond-to(w-1279) {
               flex-direction: column;
             }
+            @include respond-to(w-1023) {
+              width: 100%;
+            }
             .li-input-calc {
-              width: 45%;
+              width: 47%;
               margin-bottom: 50px;
               box-sizing: border-box;
               @include respond-to(w-1279) {
-                width: 93%;
+                width: 100%;
                 margin-bottom: 35px;
               }
               .calc-ui-slider-val {
@@ -413,9 +455,6 @@ header {
                   @include respond-to(w-1279) {
                     font-size: 24px;
                   }
-                  span {
-                    margin-right: 5px;
-                  }
                   input {
                     width: 100%;
                     color: inherit;
@@ -425,7 +464,7 @@ header {
                   }
                   .cost-txt {
                     position: absolute;
-                    right: 0;
+                    right: 10px;
                     top: 10px;
                   }
                 }
@@ -468,6 +507,7 @@ header {
                 border: none;
                 font-size: 30px;
                 color: #888888;
+                box-sizing: border-box;
                 @include respond-to(w-1366) {
                   height: 50px;
                   font-size: 20px;
@@ -481,6 +521,9 @@ header {
         background-color: $color-yellow;
         background-size: cover;
         padding: 40px;
+        @include respond-to(ww-1023) {
+          padding: 30px;
+        }
         .title {
           color: white;
           font-size: 28px;
@@ -490,6 +533,9 @@ header {
           @include respond-to(w-1366) {
             font-size: 25px;
           }
+          @include respond-to(w-1023) {
+            font-size: 20px;
+          }
         }
         .num {
           color: white;
@@ -497,6 +543,9 @@ header {
           text-align: center;
           @include respond-to(w-1366) {
             font-size: 45px;
+          }
+          @include respond-to(w-1023) {
+            font-size: 32px;
           }
         }
         .js_calc_ok {
@@ -511,6 +560,11 @@ header {
           justify-content: center;
           align-items: center;
           margin: 30px auto 0;
+          @include respond-to(w-1023) {
+            border-radius: 0;
+            font-size: 21px;
+            margin: 20px auto 0;
+          }
         }
       }
     }
@@ -540,6 +594,10 @@ header {
         @include respond-to(w-1279) {
           font-size: 19px;
         }
+        @include respond-to(w-1023) {
+          font-size: 17px;
+          padding: 7vw 2vw;
+        }
         &:before {
           content: '';
           display: block;
@@ -562,6 +620,9 @@ header {
             text-transform: uppercase;
             @include respond-to(w-1599) {
               font-size: 27px;
+            }
+            @include respond-to(w-1023) {
+              font-size: 25px;
             }
           }
           .text {
@@ -591,15 +652,26 @@ header {
         .team_header {
           width: 70%;
           margin: 20%auto 40px;
+          @include respond-to(w-1023) {
+            width: 90%;
+            margin: 15% auto 10px;
+          }
           .block {
             width: 80%;
             margin: auto;
             background-color: transparent;
+            @include respond-to(w-1023) {
+              width: 90%;
+            }
           }
           .mini {
             font-size: 22px;
             @include respond-to(w-1599) {
               font-size: 20px;
+            }
+            @include respond-to(w-1023) {
+              font-size: 18px;
+              padding: 0 40px;
             }
           }
           .text {
@@ -610,6 +682,9 @@ header {
             font-family: $font-Lora_Regular;
             @include respond-to(w-1599) {
               font-size: 34px;
+            }
+            @include respond-to(w-1023) {
+              font-size: 28px;
             }
           }
           .pic {
@@ -637,6 +712,10 @@ header {
        }
        @include respond-to(w-1279) {
          font-size: 23px;
+       }
+       @include respond-to(w-1023) {
+         margin: 30px auto;
+         font-size: 20px;
        }
      } 
     }
