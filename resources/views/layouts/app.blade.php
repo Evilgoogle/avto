@@ -41,7 +41,6 @@
         <a href="/"><img src="/images/logo.png" alt="avto"></a>
     </div>
     <nav>
-        <button type="button" class="mobile_menu"></button>
         <ul>
             <li><a href="#" class="active">Автоломбард</a></li>
             <li><a href="#">Калькулятор кредита</a></li>
